@@ -1,0 +1,30 @@
+.login-container {
+  max-width: 400px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background: var(--color-card-light);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.login-container div{
+  display: flex;
+  align-items: space-between;
+}
+body.dark-theme .login-container {
+  background: var(--color-card-dark);
+}
+.username-input,
+.password-input {
+  width: 100%;
+  
+}
+.login-input {
+  margin-bottom: 1rem;
+}
+
+.login-error {
+  color: var(--color-error);
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}

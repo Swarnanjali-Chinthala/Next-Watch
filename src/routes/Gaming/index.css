@@ -1,0 +1,81 @@
+.route {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.gaming-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.gaming-main.light {
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+.gaming-main.dark {
+  background-color: #0f0f0f;
+  color: #fff;
+}
+
+.gaming-banner {
+  flex: 0 0 auto;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.gaming-videos {
+  flex: 1;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 24px;
+  padding-right: 10px;
+}
+
+.gaming-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.gaming-card:hover {
+  transform: scale(1.02);
+}
+
+.gaming-thumbnail {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.gaming-title {
+  font-size: 16px;
+  margin: 10px 0 4px;
+  text-align: center;
+}
+
+.gaming-meta {
+  font-size: 14px;
+  color: #64748b;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .gaming-videos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .gaming-videos {
+    grid-template-columns: 1fr;
+  }
+}

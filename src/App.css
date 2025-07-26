@@ -1,0 +1,24 @@
+:root {
+  --header-bg: #ffffff;
+  --sidebar-bg: #f1f5f9;
+  --text: #000;
+  --main-bg: #f9f9f9;
+}
+
+.dark {
+  --header-bg: #181818;
+  --sidebar-bg: #0f0f0f;
+  --text: #fff;
+  --main-bg: #0f0f0f;
+}
+
+.app-body {
+  display: flex;
+}
+
+.main-content {
+  flex: 1;
+  background: var(--main-bg);
+  min-height: 100vh;
+  padding: 1rem;
+}

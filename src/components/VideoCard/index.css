@@ -1,0 +1,45 @@
+.video-card {
+  list-style: none;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.video-card__thumbnail {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.video-card__info {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.video-card__channel-logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 0.75rem;
+}
+
+.video-card__text {
+  flex: 1;
+}
+
+.video-card__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+  line-height: 1.3;
+  color: var(--text-color);
+}
+
+.video-card__channel-name,
+.video-card__meta {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin: 0;
+}

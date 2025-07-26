@@ -1,0 +1,42 @@
+.sidebar {
+  width: 200px;
+  background: var(--sidebar-bg);
+  
+  padding: 1rem;
+}
+
+.sidebar nav a {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.sidebar__contact {
+  margin-top: 2rem;
+}
+
+.sidebar__socials img {
+  width: 30px;
+  margin-right: 0.5rem;
+}
+.sidebar__icon {
+  color: #d20303; /* YouTube red */
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    
+    left: -220px;
+    top: 0;
+    bottom: 0;
+    transition: left 0.3s ease;
+    width: 100vw;
+    max-height: 10% !important;
+  }
+
+  .sidebar--open {
+    left: 0;
+  }
+}

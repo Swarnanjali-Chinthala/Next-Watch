@@ -1,0 +1,74 @@
+.trending-main {
+  flex: 1;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.trending-main.light {
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+.trending-main.dark {
+  background-color: #0f0f0f;
+  color: #fff;
+}
+
+.trending-banner {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.trending-videos {
+  
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+ flex: 1;
+    overflow-y: auto;
+    height: calc(100vh - 60px);
+}
+
+.trending-video-card {
+  display: flex;
+  gap: 20px;
+  background: transparent;
+}
+
+.trending-thumbnail {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.trending-video-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.trending-video-title {
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.trending-video-channel {
+  font-size: 16px;
+  color: #64748b;
+  margin: 0 0 5px;
+}
+
+.trending-video-meta {
+  font-size: 14px;
+  color: #7e858e;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .trending-video-card {
+    flex-direction: column;
+  }
+  .trending-thumbnail {
+    width: 100%;
+  }
+}

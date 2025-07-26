@@ -1,0 +1,193 @@
+/* index.css */
+
+:root {
+  --color-bg-light: #f9f9f9;
+  --color-bg-dark: #0f0f0f;
+
+  --color-card-light: #ffffff;
+  --color-card-dark: #181818;
+
+  --color-text-primary-light: #212121;
+  --color-text-primary-dark: #f1f1f1;
+
+  --color-text-secondary-light: #475569;
+  --color-text-secondary-dark: #cbd5e1;
+
+  --color-border-light: #e2e8f0;
+  --color-border-dark: #424242;
+
+  --color-accent: #3b82f6;
+  --color-error: #ff0b37;
+  --color-button: #4f46e5;
+  --color-muted: #94a3b8;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-primary-light);
+  transition: all 0.3s ease;
+}
+
+body.dark-theme {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-primary-dark);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--color-card-light);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--color-border-light);
+  transition: background 0.3s ease;
+}
+
+body.dark-theme .card {
+  background: var(--color-card-dark);
+  border: 1px solid var(--color-border-dark);
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+input {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border-light);
+  border-radius: 4px;
+  
+}
+
+body.dark-theme input {
+  background: var(--color-card-dark);
+  color: var(--color-text-primary-dark);
+  border: 1px solid var(--color-border-dark);
+}
+
+.btn {
+  background: var(--color-button);
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--color-button);
+  color: var(--color-button);
+}
+
+.header, .sidebar {
+  background: var(--color-card-light);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+body.dark-theme .header, body.dark-theme .sidebar {
+  background: var(--color-card-dark);
+  border-bottom: 1px solid var(--color-border-dark);
+}
+
+.sidebar {
+  width: 250px;
+  min-height: 100%;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.main {
+  flex: 1;
+  padding: 1rem;
+}
+
+.video-thumbnail {
+  width: 100%;
+  display: block;
+}
+
+.video-info {
+  padding: 1rem;
+}
+
+.video-title {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.video-channel {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary-light);
+}
+
+body.dark-theme .video-channel {
+  color: var(--color-text-secondary-dark);
+}
+
+@media (max-width: 768px) {
+  .sidebar.closed {
+     display: none;
+     min-width: 95%;
+    
+     text-align: right;
+  }
+  .sidebar.open {
+     display: inline-block;
+     min-width: 95%;
+     min-height: 25%;
+     text-align: right;
+  }
+}
+/* index.css */
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.light-theme {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.dark-theme {
+  --bg-color: #0f0f0f;
+  --text-color: #f9f9f9;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.app-body {
+  display: flex;
+  min-height: 100vh;
+}

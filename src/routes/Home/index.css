@@ -1,0 +1,120 @@
+.home-banner {
+  background: url('https://assets.ccbp.in/frontend/react-js/nxt-watch-banner-bg.png') no-repeat center;
+  background-size: cover;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--color-text-primary-light);
+}
+
+body.dark-theme .close-btn {
+  color: var(--color-text-primary-dark);
+}
+.banner {
+  position: relative;
+  background-color: #f8fafc;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.banner-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.1;
+  z-index: 1;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.banner-logo {
+  width: 120px;
+  height: auto;
+}
+
+.get-it-now-btn {
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.banner-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 2;
+}
+.banner-content p {
+  color: #000;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+.search-input {
+  padding: 0.5rem;
+  border: 1px solid #94a3b8;
+  border-radius: 4px;
+  width: 200px;
+  margin-right: 0.5rem;
+}
+
+.search-button {
+  background-color: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.home-main {
+  flex: 1;
+  overflow-y: auto; /* Only this scrolls */
+  height: calc(100vh - 60px); /* adjust if your header is 60px */
+  padding: 1rem;
+}
+
+.videos-container {
+  margin-top: 15px;
+  width: 100%;
+}
+
+.video-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 768px) {
+    .route{
+      display: flex;
+      flex-direction: column;
+    }
+}

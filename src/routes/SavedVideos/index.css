@@ -1,0 +1,72 @@
+/* Container for the whole Saved Videos content */
+main[data-testid="savedVideos"] {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Banner heading */
+main[data-testid="savedVideos"] h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: var(--text-color)
+}
+
+/* Message when no videos are saved */
+.saveVideosMessage {
+  text-align: center;
+}
+
+.saveVideosMessage img {
+  width: 200px;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.saveVideosMessage p {
+  font-size: 18px;
+ 
+}
+
+/* Grid container for videos */
+.saved-videos-grid {
+  display: grid;
+  gap: 20px;
+}
+
+/* For small & medium screens: 1 column (default) */
+.saved-videos-grid {
+  grid-template-columns: 1fr;
+}
+
+/* For large screens: 3 columns */
+@media screen and (min-width: 992px) {
+  .saved-videos-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+/* Each video card */
+.saved-videos-grid div {
+  background: var(--color-card, #fff);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.saved-videos-grid div:hover {
+  transform: translateY(-5px);
+}
+
+.saved-videos-grid img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.saved-videos-grid h3 {
+  padding: 10px;
+  font-size: 16px;
+  color: var(--color-text, #000);
+}
