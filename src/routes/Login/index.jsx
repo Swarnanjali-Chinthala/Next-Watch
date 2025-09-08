@@ -44,7 +44,7 @@ const Login = ({ theme = 'light' }) => {
         <input
           id="username"
           className="username-input"
-          placeholder="Username"
+          placeholder="Enter rahul"
           value={username}
           onChange={e => setUsername(e.target.value)}
           required
@@ -54,7 +54,7 @@ const Login = ({ theme = 'light' }) => {
           id="password"
           className="password-input"
           type={showPassword ? 'text' : 'password'}
-          placeholder="Password"
+          placeholder="Enter rahul@2021"
           value={password}
           onChange={e => setPassword(e.target.value)}
           required
