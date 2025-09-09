@@ -93,7 +93,7 @@ const VideoItemDetails = () => {
   return (
     <div className={`video-details-page ${isDarkTheme ? 'dark' : 'light'}`}>
       <Header />
-      <Sidebar isSidebarVisible={isSidebarVisible} />
+      
 
       {loading ? (
         <LoaderView />

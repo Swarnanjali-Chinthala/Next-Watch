@@ -39,8 +39,9 @@ export default function Sidebar({ isSidebarVisible, closeSidebar }) {
         </NavLink>
       </nav>
 
+      {/* Stick to bottom */}
       <div className="sidebar__contact">
-        <p>CONTACT US</p>
+        <p className="sidebar__contact-title">CONTACT US</p>
         <div className="sidebar__socials">
           <img
             src="https://assets.ccbp.in/frontend/react-js/nxt-watch-facebook-logo-img.png"

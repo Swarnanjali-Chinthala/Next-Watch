@@ -32,12 +32,24 @@
 
 .header__logout {
   padding: 0.5rem 1rem;
-  background: transparent;
-  border: 1px solid var(--text);
-  border-radius: 4px;
-  color: var(--text);
+  background: var(--color-error);   /* red (logout action) */
+  border: none;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 500;
   cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
+
+.header__logout:hover {
+  background: #e00930;              /* slightly darker red */
+  transform: translateY(-1px);
+}
+
+.header__logout:active {
+  transform: translateY(0);
+}
+
 
 .header__hamburger {
   display: none;

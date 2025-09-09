@@ -1,30 +1,106 @@
-.login-container {
-  max-width: 400px;
-  margin: 5rem auto;
-  padding: 2rem;
-  background: var(--color-card-light);
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+/* Page background */
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-bg, #f1f5f9);
 }
 
-.login-container div{
-  display: flex;
-  align-items: space-between;
-}
-body.dark-theme .login-container {
-  background: var(--color-card-dark);
-}
-.username-input,
-.password-input {
+/* Card container */
+.login-card {
   width: 100%;
-  
+  max-width: 400px;
+  padding: 2.5rem;
+  background: var(--color-card-light, #fff);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-.login-input {
+
+body.dark-theme .login-card {
+  background: var(--color-card-dark, #1f2937);
+  color: #e5e7eb;
+}
+
+/* Logo */
+.login-logo {
+  width: 120px;
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+
+/* Title */
+.login-title {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 
-.login-error {
-  color: var(--color-error);
-  margin-top: 0.5rem;
-  font-size: 0.875rem;
+/* Labels */
+.login-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: #374151;
+}
+body.dark-theme .login-label {
+  color: #d1d5db;
+}
+
+/* Inputs */
+.login-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  outline: none;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.login-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+body.dark-theme .login-input {
+  background: #111827;
+  border: 1px solid #374151;
+  color: #f9fafb;
+}
+
+/* Options row */
+.login-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+body.dark-theme .checkbox-label {
+  color: #d1d5db;
+}
+
+/* Button */
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  
 }

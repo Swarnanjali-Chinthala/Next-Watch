@@ -1,42 +1,87 @@
 .sidebar {
   width: 200px;
   background: var(--sidebar-bg);
-  
   padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  /* stack items */
+  justify-content: space-between; /* nav at top, contact at bottom */
+  height: 85vh; /* full height */
+}
+
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* equal spacing */
 }
 
 .sidebar nav a {
-  display: block;
-  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* space between icon & text */
+  padding: 0.5rem;
+  border-radius: 6px;
   color: var(--text);
   text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.sidebar nav a:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.sidebar__icon {
+  color: #d20303; /* YouTube red */
+  font-size: 20px;
 }
 
 .sidebar__contact {
-  margin-top: 2rem;
+  margin-top: auto; /* push to bottom */
+  text-align: left;
+}
+
+.sidebar__contact p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.sidebar__socials {
+  display: flex;
+  
+  gap: 0.5rem;
 }
 
 .sidebar__socials img {
-  width: 30px;
-  margin-right: 0.5rem;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
-.sidebar__icon {
-  color: #d20303; /* YouTube red */
-  font-size: 24px;
+.sidebar__socials img:hover {
+  transform: scale(1.1);
 }
 
+/* mobile view */
 @media (max-width: 768px) {
   .sidebar {
-    
     left: -220px;
     top: 0;
     bottom: 0;
     transition: left 0.3s ease;
-    width: 100vw;
-    max-height: 10% !important;
+    width: 75%;
+    max-width: 280px;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .sidebar--open {
+  .sidebar.open {
     left: 0;
+  }
+
+  .sidebar.closed {
+    left: -220px;
   }
 }

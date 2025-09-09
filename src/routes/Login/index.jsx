@@ -29,48 +29,54 @@ const Login = ({ theme = 'light' }) => {
     }
   }
 
-  // ✅ Theme-based logo URL
   const logoUrl =
     theme === 'dark'
       ? 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png'
       : 'https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-light-theme-img.png'
 
   return (
-    <div className="login-container">
-      <img src={logoUrl} alt="website logo" className="login-logo" />
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Username</label>
+    <div className="login-page">
+      <form className="login-card" onSubmit={handleSubmit}>
+        <img src={logoUrl} alt="website logo" className="login-logo" />
+        <h1 className="login-title">Sign in to NxtWatch</h1>
+
+        <label htmlFor="username" className="login-label">Username</label>
         <input
           id="username"
-          className="username-input"
+          className="login-input"
           placeholder="Enter rahul"
           value={username}
           onChange={e => setUsername(e.target.value)}
           required
         />
-        <label htmlFor="password">Password</label>
+
+        <label htmlFor="password" className="login-label">Password</label>
         <input
           id="password"
-          className="password-input"
+          className="login-input"
           type={showPassword ? 'text' : 'password'}
           placeholder="Enter rahul@2021"
           value={password}
           onChange={e => setPassword(e.target.value)}
           required
         />
-        <div>
-          <input
-            id="showPassword"
-            type="checkbox"
-            checked={showPassword}
-            onChange={e => setShowPassword(e.target.checked)}
-          />
-          <label htmlFor="showPassword">Show Password</label>
+
+        <div className="login-options">
+          <label htmlFor="showPassword" className="checkbox-label">
+            <input
+              id="showPassword"
+              type="checkbox"
+              checked={showPassword}
+              onChange={e => setShowPassword(e.target.checked)}
+            />
+            Show Password
+          </label>
         </div>
-        <button type="submit">Login</button>
+
+        <button type="submit" className="login-button">Login</button>
+
+        {error && <p className="login-error">{error}</p>}
       </form>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
     </div>
   )
 }
